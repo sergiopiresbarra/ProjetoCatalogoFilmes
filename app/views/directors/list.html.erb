@@ -1,0 +1,14 @@
+<h1>Director</h1>
+<p><%= link_to 'Home', root_path %></p>
+
+<p><strong>Name:<%=@director.name%></strong></p>
+<p>Nationality:<%=@director.nationality%></p>
+<p>Genre:<%=@director.genre.name%></p>
+<p>Birty Date:<%=@director.birty_date%></p>
+<br>
+<p>Produced Movies:</p>
+<%@movies.each do |m|%>
+<p><%=m.name%></p>
+<%end%>
+
+<%=link_to 'Edit', edit_director_path(@director.id)%>

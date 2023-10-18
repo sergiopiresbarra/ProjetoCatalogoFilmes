@@ -1,0 +1,26 @@
+<h1>New Movie</h1>
+<p><%= link_to 'Home', root_path %></p>
+<%= form_with model: @movie1 do |f| %>
+<%= f.label :name, 'Name:' %>
+<%= f.text_field :name %>
+<br>
+<%= f.label :genre.name, 'Genre:' %>
+<%= f.collection_select :genre.name, Genre.all, :id, :name%>
+<br>
+<%= f.label :release_year, 'Release Year:' %>
+<%= f.text_field :release_year %>
+<br>
+<%= f.label :synopsis, 'Synopsis:' %>
+<%= f.text_area :synopsis %>
+<br>
+<%= f.label :origin_country, 'Origin Country:' %>
+<%= f.text_field :origin_country %>
+<br>
+<%= f.label :running_time, 'Running Time:' %>
+<%= f.number_field :running_time %>
+<br>
+<%= f.label :director.name, 'Director' %>
+<%= f.collection_select :director.name, Director.all, :id, :name%>
+<br>
+<%= f.submit 'Save'%>
+<%end%>

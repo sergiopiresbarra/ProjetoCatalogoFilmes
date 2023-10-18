@@ -1,0 +1,12 @@
+<h1>Movies</h1>
+<p><%= link_to 'Home', root_path %></p>
+
+<p><strong>Name:<%=@movie.name%></strong></p>
+<p>Release Year:<%=@movie.release_year%></p>
+<p>Synopsis:<%=@movie.synopsis%></p>
+<p>Origin Country:<%=@movie.origin_country%></p>
+<p>Running Time:<%=@movie.running_time%></p>
+<p>Genre:<%=@movie.genre.name%></p>
+<p>Director:<%=@movie.director.name%></p>
+
+<%=link_to 'Edit', edit_movie_path(@movie.id)%>

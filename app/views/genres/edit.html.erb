@@ -1,0 +1,8 @@
+<h1>Edit Pannel</h1>
+<p><%= link_to 'Home', root_path %></p>
+<%= form_with model: @genre do |f| %>
+<%= f.label 'Name:' %>
+<%= f.text_field :name %>
+<br>
+<%= f.submit 'Save'%>
+<%end%>

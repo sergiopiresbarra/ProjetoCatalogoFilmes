@@ -1,0 +1,7 @@
+<h1>Movies</h1>
+<p><%= link_to 'Home', root_path %></p>
+<%=link_to 'Add New Movie', new_movie_path%>
+
+<%@movies.each do |m|%>
+<p><%= link_to m.name, list_movie_path(m.id)%>, Released:<%=m.release_year%></p>
+<%end%>

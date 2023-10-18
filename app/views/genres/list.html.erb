@@ -1,0 +1,10 @@
+<h1>Genre</h1>
+<p><%= link_to 'Home', root_path %></p>
+
+<p><strong>Name:<%=@genre.name%></strong></p>
+<p>Movies in this genre:</p>
+<%@movies.each do |m|%>
+<p><%=m.name%></p>
+<%end%>
+
+<%=link_to 'Edit', edit_genre_path(@genre.id)%>

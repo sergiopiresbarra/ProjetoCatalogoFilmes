@@ -1,0 +1,17 @@
+<h1>Edit Pannel</h1>
+<p><%= link_to 'Home', root_path %></p>
+<%= form_with model: @director do |f| %>
+<%= f.label 'Name:' %>
+<%= f.text_field :name %>
+<br>
+<%= f.label 'Genre:' %>
+<%= f.collection_select :genre.name, Genre.all, :id, :name%>
+<br>
+<%= f.label 'Nationality:' %>
+<%= f.text_field :nationality %>
+<br>
+<%= f.label 'Birty Date:' %>
+<%= f.text_area :birty_date %>
+<br>
+<%= f.submit 'Save'%>
+<%end%>

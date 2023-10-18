@@ -1,0 +1,7 @@
+<h1>Directors</h1>
+<p><%= link_to 'Home', root_path %></p>
+<%=link_to 'Add New Director', new_director_path%>
+
+<%@directors.each do |m|%>
+<p><%= link_to m.name, list_director_path(m.id)%></p>
+<%end%>

@@ -1,0 +1,26 @@
+<h1>Edit Pannel</h1>
+<p><%= link_to 'Home', root_path %></p>
+<%= form_with model: @movie do |f| %>
+<%= f.label 'Name:' %>
+<%= f.text_field :name %>
+<br>
+<%= f.label 'Genre:' %>
+<%= f.collection_select :genre.name, Genre.all, :id, :name%>
+<br>
+<%= f.label 'Release Year:' %>
+<%= f.text_field :release_year %>
+<br>
+<%= f.label 'Synopsis:' %>
+<%= f.text_area :synopsis %>
+<br>
+<%= f.label 'Origin Country:' %>
+<%= f.text_field :origin_country %>
+<br>
+<%= f.label 'Running Time:' %>
+<%= f.number_field :running_time %>
+<br>
+<%= f.label 'Director' %>
+<%= f.collection_select :director.name, Director.all, :id, :name%>
+<br>
+<%= f.submit 'Save'%>
+<%end%>
